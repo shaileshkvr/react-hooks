@@ -1,23 +1,23 @@
 interface CardProps {
   cardTitle?: string;
   cardText?: string;
-  child?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const Card = ({ cardTitle, cardText, child }: CardProps) => {
+const Card = ({ cardTitle, cardText, children }: CardProps) => {
+  console.log(children);
   return (
-    <div className="flex flex-col">
-      <div className="w-64 bg-white/20 border rounded-2xl backdrop-blur-sm p-4 m-4">
-        <h2 className="text-white text-xl mb-2">
-          {cardTitle ?? "UseState Hook"}
-        </h2>
-        <p className="text-white/70">
-          {cardText ??
-            `React useState returns an array with two elements, first is the state
+    <div className="w-80 bg-white/10 border border-white/40 rounded-2xl backdrop-blur-sm p-4 hover:transition-all hover:border-white cursor-default">
+      <h2 className="text-white text-xl mb-2">
+        {cardTitle ?? "UseState Hook"}
+      </h2>
+      <p className="text-white/70">
+        {cardText ??
+          `React useState returns an array with two elements, first is the state
           and second is the function to update the state.`}
-        </p>
-      </div>
-      {child ?? null}
+      </p>
+
+      {children}
     </div>
   );
 };
