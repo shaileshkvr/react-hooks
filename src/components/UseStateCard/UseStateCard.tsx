@@ -48,7 +48,7 @@ const UseStateCard = () => {
       </div>
       <div className="mt-5 flex flex-col">
         <h1 className="text-lg text-slate-300">
-          I own a {carData.color} {carData.name} {carData.model}.
+          I own a {carData.color} {carData.name}.
         </h1>
         <button
           type="button"
